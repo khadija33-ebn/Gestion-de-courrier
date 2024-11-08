@@ -1,9 +1,10 @@
 <?php
 ob_start();
 include_once 'action.php';
+include_once 'authorize.php';
 
 require 'header.php';
-if (!isset($_SESSION['id'])) {
+if (!isset($_SESSION['id']) || !authorizeUserWith($_SESSION['user_id'],'secretaire') {
     header('location: login.php');
      } 
       
