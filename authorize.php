@@ -5,7 +5,7 @@ function authorizeUserWithRole($user_id, $requiredRole) {
     $host = "localhost";
     $user = "root";
     $db_password = "";
-    $dbname = "your_database";
+    $dbname = "gestioncourrier";
 
     // Create a new connection
     $conn = mysqli_connect($host, $user, $db_password, $dbname);
