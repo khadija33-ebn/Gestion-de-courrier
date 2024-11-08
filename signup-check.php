@@ -66,6 +66,12 @@ if (isset($_POST['username']) && isset($_POST['password'])
            $sql2 = "INSERT INTO users(nom,username, pwd,email ) VALUES('$name','$uname','$pass', '$email')";
            $result2 = mysqli_query($conn, $sql2);
            if ($result2) {
+		    // Get the user ID of the newly created user
+               $user_id = mysqli_insert_id($conn);
+
+               // Store user ID in the session
+               $_SESSION['user_id'] = $user_id;
+		   
            	 header("Location: signup.php?success=Your account has been created successfully");
 	         exit();
            }else {
