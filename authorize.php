@@ -2,9 +2,9 @@
 
 function authorizeUserWithRole($user_id, $requiredRole) {
     // Database connection parameters
-    $host = "your_host";
-    $user = "your_username";
-    $db_password = "your_password";
+    $host = "localhost";
+    $user = "root";
+    $db_password = "";
     $dbname = "your_database";
 
     // Create a new connection
